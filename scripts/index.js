@@ -17,7 +17,7 @@ for (i = 0; i <= 1; i++) {
         if (count > 99)
             count = 0;
             winner()
-        tableScore.innerHTML = count
+        tableScore.innerHTML = + count
     })
 
     buttonPlusTwo.addEventListener('click', function () {
@@ -25,7 +25,7 @@ for (i = 0; i <= 1; i++) {
         if (count > 99)
             count = 0;
             winner()
-        tableScore.innerHTML = count
+        tableScore.innerHTML = + count
     })
 
     buttonPlusTree.addEventListener('click', function () {
@@ -33,11 +33,12 @@ for (i = 0; i <= 1; i++) {
         winner()
         if (count > 99)
             count = 0;
-        tableScore.innerHTML = count
+        tableScore.innerHTML = + count;
     })
 
     table.addEventListener('click', function () {
-        tableScore.innerHTML = 0;
+        count = 0;
+        tableScore.innerHTML =  0;
         winner()
     })
 };
