@@ -3,12 +3,16 @@ const guestScore = document.querySelector('.score-table__score--guest');
 
 function winner() {
     if (homeScore.innerHTML > guestScore.innerHTML) {
-        homeScore.classList.add('score-table__score--winner')
-        guestScore.classList.remove('score-table__score--winner')
+        homeScore.classList.add('score-table__score--winner'),
+        guestScore.classList.remove('score-table__score--winner');
     }
     else {
-        guestScore.classList.add('score-table__score--winner')
-        homeScore.classList.remove('score-table__score--winner')
+        guestScore.classList.add('score-table__score--winner'),
+        homeScore.classList.remove('score-table__score--winner');
+    }
+    if (homeScore.innerHTML == guestScore.innerHTML) {
+        homeScore.classList.remove('score-table__score--winner'),
+        guestScore.classList.remove('score-table__score--winner');
     }
 }
 
@@ -46,6 +50,4 @@ newGame.addEventListener("click", function () {
         isNewGame = true;
     });
 });
-
-
 
