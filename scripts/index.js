@@ -3,18 +3,14 @@ const guestScore = document.querySelector('.score-table__score--guest');
 
 function winner() {
     if (homeScore.innerHTML > guestScore.innerHTML) {
-        homeScore.classList.add('score-table__score--winner'),
-            guestScore.classList.remove('score-table__score--winner');
+        guestScore.classList.remove('score-table__score--winner');
+        homeScore.classList.add('score-table__score--winner')
     }
     else {
-        guestScore.classList.add('score-table__score--winner'),
-            homeScore.classList.remove('score-table__score--winner');
-    }
-    if (homeScore.innerHTML == guestScore.innerHTML) {
-        homeScore.classList.remove('score-table__score--winner'),
-            guestScore.classList.remove('score-table__score--winner');
-    }
-}
+        homeScore.classList.remove('score-table__score--winner');
+        guestScore.classList.add('score-table__score--winner')
+        
+    }};
 
 let isNewGame = false;
 const buttons = document.querySelectorAll(".score-table__buttons-wrapper");
@@ -48,7 +44,8 @@ newGame.addEventListener("click", function () {
     score.forEach(function (element) {
         element.innerHTML = 0;
         isNewGame = true;
+        homeScore.classList.remove('score-table__score--winner'),
+        guestScore.classList.remove('score-table__score--winner');
     });
-    winner()
 });
 
