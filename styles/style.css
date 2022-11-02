@@ -75,8 +75,7 @@ body {
     border: 2px solid #9AABD8;
     background: #1F2937;
     color: #EEEEEE;
-    width: 45px;
-    height: 45px;
+    padding: 8px 15px;
     border-radius: 5px;
     font-family: digital-7;
     font-size: 18px;
@@ -90,8 +89,10 @@ body {
 }
 
 .score-table__button--reset {
-    margin-top: 320px;
-    width: 60px;
+    display: block;
+    position: relative;
+    height: 60px;
+    top: 270px;
 }
 
 
